@@ -70,7 +70,7 @@ body {
 .navbar .nav-links a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.2rem; /* Default font size */
+    font-size: 1.2rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -82,7 +82,7 @@ body {
 /* Responsive Navbar */
 @media (max-width: 768px) {
     .navbar .nav-links a {
-        font-size: 0.9rem; /* Smaller font size for mobile */
+        font-size: 0.9rem;
     }
 }
 
@@ -132,7 +132,7 @@ body {
 
 .twitch-container {
     margin: 2rem auto;
-    max-width: 620px;
+    max-width: 800px; /* Larger size for desktop */
     position: relative;
 }
 
@@ -269,12 +269,11 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: -1;
+    z-index: -1; /* Below all content */
 }
 
 .circle {
     position: absolute;
-    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     animation: float 10s infinite ease-in-out;
 }
@@ -284,6 +283,7 @@ body {
     height: 200px;
     top: 10%;
     left: 20%;
+    background: rgba(109, 213, 237, 0.3); /* Light Blue */
     animation-delay: 0s;
 }
 
@@ -292,6 +292,7 @@ body {
     height: 150px;
     top: 50%;
     left: 70%;
+    background: rgba(33, 147, 176, 0.3); /* Darker Blue */
     animation-delay: 2s;
 }
 
@@ -300,6 +301,7 @@ body {
     height: 100px;
     top: 80%;
     left: 30%;
+    background: rgba(109, 213, 237, 0.2); /* Semi-transparent Light Blue */
     animation-delay: 4s;
 }
 
@@ -308,6 +310,7 @@ body {
     height: 250px;
     top: 30%;
     left: 50%;
+    background: rgba(33, 147, 176, 0.2); /* Semi-transparent Darker Blue */
     animation-delay: 6s;
 }
 
@@ -323,6 +326,49 @@ body {
     }
 }
 
+/* About Page */
+.about-page {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+    border-radius: 20px;
+    margin: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1; /* Above floating circles */
+}
+
+.about-page h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-page p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.takao-image-container {
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 300px;
+    position: relative;
+}
+
+.takao-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.takao-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -332,6 +378,7 @@ footer {
     border-radius: 20px 20px 0 0;
     margin-top: auto;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Above floating circles */
 }
 
 /* Animations */
@@ -361,14 +408,18 @@ footer {
         font-size: 1rem;
     }
 
-    /* Features Section */
-    .features {
-        flex-direction: column;
-        align-items: center;
+    /* Twitch Container */
+    .twitch-container {
+        max-width: 100%; /* Smaller size for mobile */
     }
 
-    .feature-item {
-        width: 90%;
+    /* About Page */
+    .about-page h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-page p {
+        font-size: 1rem;
     }
 
     /* Floating Circles */
