@@ -23,7 +23,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Match the webpage background */
     border-radius: 10px;
 }
 
@@ -246,6 +246,7 @@ body {
     transition: transform 0.3s ease;
     width: 100%; /* Full width for responsiveness */
     height: 450px; /* Fixed height for desktop */
+    aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
 }
 
 .twitch-container:hover iframe {
