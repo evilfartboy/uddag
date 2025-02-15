@@ -17,7 +17,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  background: linear-gradient(90deg, #625fff, #7be6fe);
   position: fixed;
   width: 100%;
   z-index: 1000; 
@@ -56,7 +56,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  background: linear-gradient(135deg, #625fff, #7be6fe);
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -115,7 +115,7 @@ body {
 }
 
 .feature-card {
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  background: linear-gradient(135deg, #625fff, #7be6fe);
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -170,7 +170,7 @@ body {
 .timeline-section {
   margin-top: 4rem;
   padding: 2rem;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  background: linear-gradient(135deg, #625fff, #7be6fe);
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -238,7 +238,7 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
   color: #fff;
-  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  background: linear-gradient(90deg, #625fff, #7be6fe);
   border: none;
   border-radius: 50px; 
   text-decoration: none; 
