@@ -41,7 +41,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(90deg, #2193b0, #6dd5ed);
+    background: #1a73b8; /* Darker blue for contrast */
     color: #fff;
     padding: 1rem 2rem;
     position: sticky;
@@ -173,12 +173,18 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     width: 100%; /* Full width for responsiveness */
-    height: auto; /* Auto height based on aspect ratio */
-    aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+    height: 450px; /* Fixed height for desktop */
 }
 
 .twitch-container:hover iframe {
     transform: scale(1.02);
+}
+
+/* Responsive Twitch Window */
+@media (max-width: 768px) {
+    .twitch-container iframe {
+        height: 300px; /* Smaller height for mobile */
+    }
 }
 
 .btn-buy {
@@ -406,11 +412,6 @@ footer {
 
     .home p {
         font-size: 1rem;
-    }
-
-    /* Twitch Container */
-    .twitch-container {
-        max-width: 100%; /* Smaller size for mobile */
     }
 
     /* About Page */
