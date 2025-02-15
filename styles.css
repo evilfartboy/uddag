@@ -36,6 +36,78 @@ body {
     background: linear-gradient(90deg, #6dd5ed, #2193b0);
 }
 
+/* Floating Circles */
+.floating-circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1; /* Above the body's gradient background */
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    animation: float 10s infinite ease-in-out;
+}
+
+.circle-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 20%;
+    background: rgba(109, 213, 237, 0.3); /* Light Blue */
+    animation-delay: 0s;
+}
+
+.circle-2 {
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    left: 70%;
+    background: rgba(33, 147, 176, 0.3); /* Darker Blue */
+    animation-delay: 2s;
+}
+
+.circle-3 {
+    width: 100px;
+    height: 100px;
+    top: 80%;
+    left: 30%;
+    background: rgba(109, 213, 237, 0.2); /* Semi-transparent Light Blue */
+    animation-delay: 4s;
+}
+
+.circle-4 {
+    width: 250px;
+    height: 250px;
+    top: 30%;
+    left: 50%;
+    background: rgba(33, 147, 176, 0.2); /* Semi-transparent Darker Blue */
+    animation-delay: 6s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    position: relative;
+    z-index: 2; /* Above the floating circles */
+    background: transparent; /* Ensure transparency to see the circles */
+}
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -267,114 +339,6 @@ body {
     font-size: 1rem;
 }
 
-/* Floating Circles */
-.floating-circles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1; /* Below all content */
-}
-
-.circle {
-    position: absolute;
-    border-radius: 50%;
-    animation: float 10s infinite ease-in-out;
-}
-
-.circle-1 {
-    width: 200px;
-    height: 200px;
-    top: 10%;
-    left: 20%;
-    background: rgba(109, 213, 237, 0.3); /* Light Blue */
-    animation-delay: 0s;
-}
-
-.circle-2 {
-    width: 150px;
-    height: 150px;
-    top: 50%;
-    left: 70%;
-    background: rgba(33, 147, 176, 0.3); /* Darker Blue */
-    animation-delay: 2s;
-}
-
-.circle-3 {
-    width: 100px;
-    height: 100px;
-    top: 80%;
-    left: 30%;
-    background: rgba(109, 213, 237, 0.2); /* Semi-transparent Light Blue */
-    animation-delay: 4s;
-}
-
-.circle-4 {
-    width: 250px;
-    height: 250px;
-    top: 30%;
-    left: 50%;
-    background: rgba(33, 147, 176, 0.2); /* Semi-transparent Darker Blue */
-    animation-delay: 6s;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-/* About Page */
-.about-page {
-    padding: 3rem 1rem;
-    text-align: center;
-    background-color: #fff;
-    color: #333;
-    border-radius: 20px;
-    margin: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1; /* Above floating circles */
-}
-
-.about-page h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.about-page p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-}
-
-.takao-image-container {
-    margin: 2rem auto;
-    text-align: center;
-    max-width: 300px;
-    position: relative;
-}
-
-.takao-image {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.takao-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
 /* Footer */
 footer {
     text-align: center;
@@ -384,7 +348,7 @@ footer {
     border-radius: 20px 20px 0 0;
     margin-top: auto;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1; /* Above floating circles */
+    z-index: 2; /* Above the floating circles */
 }
 
 /* Animations */
